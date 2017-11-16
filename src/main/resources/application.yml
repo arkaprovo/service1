@@ -4,5 +4,17 @@ spring:
             indent_output: true
             write_dates_as_timestamps: false
             write_durations_as_timestamps: false
+    application:
+      name: S1
+
 server:
   port: 8081
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+  instance:
+    hostname: localhost
